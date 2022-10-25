@@ -168,6 +168,18 @@ let serve = () => {
     watch(`index.html`).on(`change`, reload);
 };
 
+watch(`dev/scripts/*.js`, series(lintJS, transpileJSForDev))
+    .on(`change`, reload);
+
+watch(`dev/styles/scss/**/*.scss`, compileCSSForDev)
+    .on(`change`, reload);
+
+watch(`dev/html/**/*.html`, validateHTML)
+    .on(`change`, reload);
+
+watch(`dev/img/**/*`)
+    .on(`change`, reload);
+
 async function clean() {
 let fs = require(`fs`),
     i,
