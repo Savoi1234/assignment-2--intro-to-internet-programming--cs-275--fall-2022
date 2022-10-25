@@ -12,6 +12,24 @@ sass = require(`gulp-sass`)(require(`sass`)),
 browserSync = require(`browser-sync`),
 reload = browserSync.reload;
 
+
+let srv = () => {
+    browserSync({
+        notify: true,
+        reloadDelay: 50,
+        server: {
+            baseDir: [
+                `dev/html`,
+                `dev`
+            ]
+        }
+    });
+
+    watch(`index.html`).on(`change`, reload);
+};
+
+exports.default = srv;
+
 let browserChoice = `default`;
 
 async function brave () {
@@ -136,30 +154,18 @@ return src([
 };
 
 let serve = () => {
-browserSync({
-    notify: true,
-    reloadDelay: 50,
-    browser: browserChoice,
-    server: {
-        baseDir: [
-            `temp`,
-            `dev`,
-            `dev/html`
-        ]
-    }
-});
+    browserSync({
+        notify: true,
+        reloadDelay: 50,
+        server: {
+            baseDir: [
+                `dev/html`,
+                `dev`
+            ]
+        }
+    });
 
-watch(`dev/scripts/*.js`, series(lintJS, transpileJSForDev))
-    .on(`change`, reload);
-
-watch(`dev/styles/scss/**/*.scss`, compileCSSForDev)
-    .on(`change`, reload);
-
-watch(`dev/html/**/*.html`, validateHTML)
-    .on(`change`, reload);
-
-watch(`dev/img/**/*`)
-    .on(`change`, reload);
+    watch(`index.html`).on(`change`, reload);
 };
 
 async function clean() {
@@ -212,6 +218,9 @@ return src(`dev/styles/css/**/*.css`)
     }));
 };
 
+
+
+exports.default = serve;
 exports.brave = series(brave, serve);
 exports.chrome = series(chrome, serve);
 exports.edge = series(edge, serve);
