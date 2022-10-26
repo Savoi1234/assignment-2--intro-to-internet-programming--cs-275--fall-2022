@@ -2,10 +2,10 @@ div {
     font-size: .9rem;
     margin: 0;
     padding: 10px;
-    width: imgsize;
+    width:  imgsize;
     height: imgsize;
     border: 4px solid transparent;
-  }
+  } 
   
   .container {
     display: flex;
@@ -14,6 +14,17 @@ div {
   }
   
   div:nth-child(1) {
+      position: fixed;
+      top: 175;
+      left: 500;
+      margin: 0;
+      border-bottom: 1px solid #ddd;
+      box-shadow: 0 3px 3px #aaa;
+      padding: 0;
+      width: 100px;
+      height: var(--nav-height);
+      background-color: white;
+
   }
   
   div:nth-child(2) {
@@ -41,6 +52,15 @@ div {
     background-color: grey;
   }
   div:nth-child(7) {
-    
+      position: fixed;
+      top: 175;
+      right: 500;
+      margin: 0;
+      border-bottom: 1px solid #ddd;
+      box-shadow: 0 3px 3px #aaa;
+      padding: 0;
+      width: 100px;
+      height: var(--nav-height);
+      background-color: white;
+
   }
-  
