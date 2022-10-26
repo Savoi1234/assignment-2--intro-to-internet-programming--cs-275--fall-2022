@@ -14,17 +14,32 @@ div {
   }
   
   div:nth-child(1) {
-    border-color: red;
   }
   
   div:nth-child(2) {
     border-color: green;
+    background-color: grey;
   }
   
   div:nth-child(3) {
     border-color: green;
+    background-color: grey;
   }
   
   div:nth-child(4) {
     border-color: green;
+    background-color: grey;
   }
+  div:nth-child(5) {
+    border-color: green;
+    background-color: grey;
+  }
+  
+  div:nth-child(6) {
+    border-color: green;
+    background-color: grey;
+  }
+  div:nth-child(7) {
+    
+  }
+  
