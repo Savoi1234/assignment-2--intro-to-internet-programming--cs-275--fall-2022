@@ -27,8 +27,8 @@ div {
     left:0; 
     overflow:hidden;
 
-
   }
+
 
   .text {
     flex-direction:column;
@@ -42,7 +42,17 @@ div {
     top: 175;
     right: 500;
   }
+
   img  {
-    width: 50px;
+    height: 250px;
+    width: 150px;
     vertical-align: middle;
   }
+
+h1 {
+  font-size: 42px;
+  line-height: 50.4px;
+  justify-content: center;
+  margin-bottom: 50px;
+  margin: 10% auto;
+}
