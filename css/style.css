@@ -69,6 +69,8 @@ div {
   .slideshow {
     display: flex;
     left:0; 
+    overflow:hidden;
+    
 
   }
   .arrow {
@@ -76,6 +78,7 @@ div {
     top: 175;
     right: 500;
   }
-  .img  {
+  img  {
     width: 50px;
+    vertical-align: middle;
   }
