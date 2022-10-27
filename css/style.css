@@ -1,4 +1,8 @@
 
+body{
+  
+}
+
 div {
     font-size: .9rem;
     margin: 0;
@@ -47,6 +51,8 @@ div {
     height: 250px;
     width: 150px;
     vertical-align: middle;
+    float: left;
+
   }
 
 h1 {
