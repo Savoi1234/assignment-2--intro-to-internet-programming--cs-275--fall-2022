@@ -70,9 +70,16 @@ div {
     display: flex;
     left:0; 
     overflow:hidden;
-    
+
 
   }
+
+  .text {
+    flex-direction:column;
+    width:100px; 
+
+  }
+
   .arrow {
     height: 50px; 
     top: 175;
