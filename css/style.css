@@ -1,3 +1,4 @@
+
 div {
     font-size: .9rem;
     margin: 0;
@@ -6,24 +7,16 @@ div {
     height: imgsize;
     border: 4px solid transparent;
   } 
-  
+
   .container {
-    display: flex;
-    justify-content: center;
-    justify-content: space-between;
+    display:flex;
+    flex-direction:row;
   }
   
   div:nth-child(1) {
-      position: fixed;
-      top: 175;
-      left: 500;
-      margin: 0;
-      border-bottom: 1px solid #ddd;
-      box-shadow: 0 3px 3px #aaa;
-      padding: 0;
-      width: 100px;
-      height: var(--nav-height);
-      background-color: white;
+    border-color: green;
+    background-color: grey;
+    
 
   }
   
@@ -63,4 +56,23 @@ div {
       height: var(--nav-height);
       background-color: white;
 
+  }
+  .slide {
+    width: 500px;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 0;
+    transition: left 1s;
+  } 
+  .slideshow {
+    display: flex;
+    left:0; 
+
+  }
+  .arrow {
+    height: 50px; 
+    top: 175;
+    right: 500;
   }
